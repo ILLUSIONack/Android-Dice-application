@@ -26,7 +26,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void backToDie(){
-        Intent intent = new Intent(this,Activity.class);
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }
