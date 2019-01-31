@@ -1,1 +1,1 @@
-# Android application for the Digitial component made in Android Studio
+Digitial component, Mobile version made in Android Studio
