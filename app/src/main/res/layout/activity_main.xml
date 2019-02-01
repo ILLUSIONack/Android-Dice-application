@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,95 +10,56 @@
         android:id="@+id/background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:background="@drawable/background2"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/todo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/ImageDice"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="185dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/dice1" />
+        android:src="@drawable/dice1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
 
-    <Button
-        android:id="@+id/diceButton"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ImageDice"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="-103dp"
-        android:onClick="diceButton"
-        android:text="@string/roll_dice" />
-
-    <Button
-        android:id="@+id/ResetBtn"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ImageDice"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="253dp"
-        android:layout_marginRight="253dp"
-        android:layout_marginBottom="-102dp"
-        android:onClick="onClickReset"
-        android:text="@string/reset" />
 
     <Button
         android:id="@+id/SpinnerBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/background"
-        android:layout_alignBottom="@+id/ImageDice"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginTop="567dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginRight="162dp"
-        android:layout_marginBottom="-180dp"
-        android:text="Spinner" />
+        android:layout_marginTop="8dp"
+        android:text="@string/spinner"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageDice"
+        app:layout_constraintVertical_bias="0.482" />
 
     <TextView
-        android:layout_width="333dp"
-        android:layout_height="115dp"
-        android:layout_alignBottom="@+id/background"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginRight="46dp"
-        android:layout_marginBottom="520dp"
-        android:text="@string/app_name"
+        android:text="Die Roller"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="40sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.036" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

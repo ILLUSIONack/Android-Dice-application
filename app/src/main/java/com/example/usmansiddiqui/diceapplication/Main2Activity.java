@@ -1,6 +1,5 @@
 package com.example.usmansiddiqui.diceapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,7 +25,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void backToDie(){
-        Intent intent = new Intent(this,Activity.class);
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }

@@ -13,7 +13,8 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class
+MainActivity extends AppCompatActivity {
     private ImageView imageViewDice;
     private Button spinnerBtn;
     private Random rng = new Random();
@@ -68,35 +69,6 @@ public class MainActivity extends AppCompatActivity {
     public void openSpinner(){
         Intent intent = new Intent(this,Main2Activity.class);
         startActivity(intent);
-    }
-
-    public void diceButton(View v){
-        Toast toast = Toast.makeText(getApplicationContext(),"Rolling",Toast.LENGTH_LONG);
-        toast.show();
-        diceAnim();
-        TimerTask task = new TimerTask() {
-            int tick = 0;
-            @Override
-            public void run() {
-                if(tick>6){
-                    rollDice(diceImages);
-                    cancel();
-                }
-                rollDice(diceImages);
-                tick++;
-            }
-        };
-
-        Timer timer = new Timer();
-        timer.schedule(task, 1, 100);
-    }
-
-    public void onClickReset(View v){
-        Animation anima = AnimationUtils.loadAnimation(this,R.anim.anim2);
-        Toast toast = Toast.makeText(getApplicationContext(),"Reseted",Toast.LENGTH_LONG);
-        toast.show();
-        imageViewDice.setImageResource(R.drawable.dice1);
-        imageViewDice.startAnimation(anima);
     }
 
     private void diceAnim(){
