@@ -5,4 +5,5 @@
     <string name="die">die</string>
     <string name="todo">TODO</string>
     <string name="spinner">Spinner</string>
+    <string name="spinnerImage">spinnerImage</string>
 </resources>
