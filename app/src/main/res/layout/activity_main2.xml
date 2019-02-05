@@ -18,6 +18,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:requiresFadingEdge="none|vertical"
         android:text="@string/die"
         android:textAllCaps="false"
@@ -25,8 +26,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintTop_toBottomOf="@+id/SpinnerImage"
+        app:layout_constraintVertical_bias="0.482" />
 
     <TextView
         android:id="@+id/textView2"
@@ -48,8 +49,8 @@
 
     <ImageView
         android:id="@+id/SpinnerImage"
-        android:layout_width="333dp"
-        android:layout_height="249dp"
+        android:layout_width="296dp"
+        android:layout_height="282dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -57,12 +58,13 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/spinnerImage"
-        android:src="@drawable/spinner"
+        android:src="@drawable/spinnerreal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintVertical_bias="0.201" />
 
 
 </android.support.constraint.ConstraintLayout>
