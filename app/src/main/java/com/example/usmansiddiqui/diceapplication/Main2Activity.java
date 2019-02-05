@@ -43,10 +43,10 @@ public class Main2Activity extends AppCompatActivity {
     public void spin(){
         Random rng = new Random();
         oldDegree = degree % 360;
-        degree = rng.nextInt(3600) + 720;
+        degree = rng.nextInt(360) + 1440;
         RotateAnimation rotate = new RotateAnimation(oldDegree,degree,
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f,RotateAnimation.RELATIVE_TO_SELF,0.5f);
-        rotate.setDuration(2000);
+        rotate.setDuration(3000);
         rotate.setFillAfter(true);
         rotate.setInterpolator(new DecelerateInterpolator());
         rotate.setAnimationListener(new Animation.AnimationListener() {
