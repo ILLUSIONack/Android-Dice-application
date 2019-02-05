@@ -10,13 +10,14 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class Main2Activity extends AppCompatActivity {
     private Button DieBtn;
     private ImageView spinnerImage;
-    private Random rng;
+    private int degree = 0, oldDegree = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +41,12 @@ public class Main2Activity extends AppCompatActivity {
         });
     }
     public void spin(){
-        RotateAnimation rotate = new RotateAnimation(0,360,
+        Random rng = new Random();
+        oldDegree = degree % 360;
+        degree = rng.nextInt(3600) + 720;
+        RotateAnimation rotate = new RotateAnimation(oldDegree,degree,
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f,RotateAnimation.RELATIVE_TO_SELF,0.5f);
-        rotate.setDuration(1000);
+        rotate.setDuration(2000);
         rotate.setFillAfter(true);
         rotate.setInterpolator(new DecelerateInterpolator());
         rotate.setAnimationListener(new Animation.AnimationListener() {
@@ -61,9 +65,10 @@ public class Main2Activity extends AppCompatActivity {
 
             }
         });
+
         spinnerImage.startAnimation(rotate);
     }
-    
+
     public void backToDie(){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
